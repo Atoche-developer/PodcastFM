@@ -1,0 +1,40 @@
+@use '../custom' as *;
+@use '../utils/mixins' as m;
+
+:root {
+	--bs-body-font-size: 1.6rem;
+}
+
+.header {
+	padding: 10rem 0;
+
+	&__logo {
+		width: 12rem;
+		height: 8rem;
+
+		@include media-breakpoint-up(md) {
+			width: 15rem;
+			height: 10rem;
+		}
+	}
+
+	&__title {
+		font-size: 4rem;
+
+		@include media-breakpoint-up(md) {
+			font-size: 6rem;
+		}
+	}
+}
+
+.notavif .notwebp .header {
+	@include m.bgImage($gris, '../img/header.jpg');
+}
+
+.webp .header {
+	@include m.bgImage($gris, '../img/header.webp');
+}
+
+.avif .header {
+	@include m.bgImage($gris, '../img/header.avif');
+}

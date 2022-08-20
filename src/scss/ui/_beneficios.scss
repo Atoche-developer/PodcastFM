@@ -1,0 +1,35 @@
+@use '../custom' as *;
+@use '../utils/mixins' as m;
+
+.beneficio {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  @include media-breakpoint-up(md) {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
+  &__title {
+    @include m.hadingBorder($secondary, #fff);
+
+    @include media-breakpoint-up(md) {
+      font-size: 3rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: 3.5rem;
+    }
+  }
+
+  &__img {
+    transition: transform .3s;
+
+    @include media-breakpoint-up(md) {
+      &:hover {
+        transform: scale(1.1) rotate(3deg);
+      }
+    }
+
+  }
+}

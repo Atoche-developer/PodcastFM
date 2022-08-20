@@ -13,16 +13,16 @@
   color: $colorTexto;
   display: inline-block;
 
-  &::after {
-    content: '';
-    margin-top: -1.3rem;
-    height: 1rem;
-    width: 100%;
-    display: block;
-    background-color: $colorLinea;
-  }
-
   @include media-breakpoint-up(md) {
+    &::after {
+      content: '';
+      margin-top: -1.3rem;
+      height: 1rem;
+      width: 100%;
+      display: block;
+      background-color: $colorLinea;
+    }
+
     font-size: 3.5rem;
   }
 }

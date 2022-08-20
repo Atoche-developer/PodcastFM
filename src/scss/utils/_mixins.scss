@@ -1,6 +1,28 @@
+@use '../custom' as *;
+
 @mixin bgImage($color, $url) {
   background-image: linear-gradient(transparentize($color, .3%) 0%, transparentize($color, .3%) 100%), url($url);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
+}
+
+@mixin hadingBorder($colorTexto, $colorLinea) {
+  font-size: 3rem;
+  z-index: 100;
+  color: $colorTexto;
+  display: inline-block;
+
+  &::after {
+    content: '';
+    margin-top: -1.3rem;
+    height: 1rem;
+    width: 100%;
+    display: block;
+    background-color: $colorLinea;
+  }
+
+  @include media-breakpoint-up(md) {
+    font-size: 4rem;
+  }
 }

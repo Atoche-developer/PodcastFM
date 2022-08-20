@@ -1,0 +1,16 @@
+@use '../custom' as *;
+@use '../utils/mixins' as m;
+
+.podcast {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  @include media-breakpoint-up(md) {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
+  &__title {
+    @include m.hadingBorder($secondary, $primary);
+  }
+}
